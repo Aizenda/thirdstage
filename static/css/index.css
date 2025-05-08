@@ -1,0 +1,172 @@
+/* 全局樣式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* 頁面標題 */
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #3498db;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+/* 上傳表單區域 */
+.upload-form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  max-width: 550px;
+}
+
+/* 輸入框樣式 */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 16px;
+}
+
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-group input[type="text"]:focus {
+  border-color: #3498db;
+}
+
+/* 文件選擇器 */
+.file-input-group {
+  margin-bottom: 20px;
+}
+
+.file-input-button {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.file-name {
+  margin-left: 10px;
+  color: #777;
+}
+
+/* 隱藏原始的file input */
+input[type="file"] {
+  display: none;
+}
+
+/* 上傳按鈕 */
+.upload-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #2980b9;
+}
+
+/* 已上傳圖片區域 */
+.uploaded-images {
+  margin-top: 30px;
+}
+
+.image-item {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  width: 300px; 
+  height: 300px; 
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover; 
+}
+
+.image-text {
+  font-size: 16px;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .upload-form-container {
+    padding: 20px;
+  }
+  
+  .image-container {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* 改進表單樣式 - 未選擇文件的提示文字 */
+.no-file-selected {
+  color: #999;
+  font-style: italic;
+}
+
+/* 改進圖片顯示區域 - 網格布局 */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill);
+  gap: 40px;
+}

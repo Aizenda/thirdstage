@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上傳圖片</title>
+  <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+  <h1>上傳圖片</h1>
+  
+  <div class="upload-form-container">
+    <form id="upload-form">
+      <div class="input-group">
+        <label for="text-input">請輸入文字</label>
+        <input type="text" id="text-input" name="text" required>
+      </div>
+      
+      <div class="file-input-group">
+        <label for="file-input" class="file-input-button">選擇檔案</label>
+        <span class="file-name no-file-selected" id="file-name">未選擇任何檔案</span>
+        <input type="file" id="file-input" name="file" accept="image/*" required>
+      </div>
+      
+      <button type="submit" class="upload-button">上傳</button>
+    </form>
+  </div>
+  
+  <div id="data-container" class="image-grid">
+  </div>
+
+  <script src="/static/js/index.js"></script>
+</body>
+</html>
