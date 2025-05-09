@@ -37,7 +37,7 @@ class Uploader():
 			return None
 
 	def get_file_url(self, bucket, key):
-		url = f"https://{bucket}.s3.{AWS_Region}.amazonaws.com/{key}"
+		url = f"https://d3v5oek5w3gawn.cloudfront.net/{key}"
 		return url
 	
 
